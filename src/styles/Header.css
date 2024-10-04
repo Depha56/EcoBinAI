@@ -13,18 +13,28 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Increase logo size */
 .header-logo {
+  flex: 1;
   display: flex;
-  align-items: center;
+  justify-content: flex-start;
 }
 
 .logo-img {
-  height: 200px; /* Adjust the height to fit your logo size */
+  height: 200px; /* Adjust the height for larger logo */
   width: auto;
-  margin-top: 10px;  /* Maintain the aspect ratio */
+  margin-top: -75px;
 }
 
-.header-nav ul {
+/* Center the navigation links */
+.header-nav {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links {
   display: flex;
   gap: 20px;
   list-style: none;
@@ -33,7 +43,7 @@
 .nav-links a {
   color: #333;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -42,22 +52,108 @@
   color: rgb(0, 150, 66); /* Hover effect on links */
 }
 
-.contact-button {
-  background-color: rgb(0, 150, 66);
+/* Auth buttons: Login and Signup */
+.auth-buttons {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.login-button {
+  background-color: #007bff; /* Blue color for Login */
   color: white;
   padding: 10px 20px;
   border-radius: 20px;
-  font-weight: 600;
   text-decoration: none;
+  font-weight: 600;
   transition: background-color 0.3s ease;
 }
 
-.contact-button:hover {
-  background-color: rgb(0, 150, 66); /* Slightly darker green on hover */
+.login-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.signup-button {
+  background-color: rgb(0, 150, 66); /* Green color for Signup */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+  background-color: rgb(0, 120, 50); /* Darker green on hover */
 }
 
 /* Sticky header shadow effect when scrolling */
 .header.scrolled {
   background-color: #f7f7f7;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger .open {
+  background-color: #007bff;
+}
+
+.header-nav.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.header-nav.open .nav-links {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header-nav.open .auth-buttons {
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .auth-buttons {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .header-nav.open .nav-links {
+    display: flex;
+  }
+
+  .header-nav.open .auth-buttons {
+    display: flex;
+  }
 }

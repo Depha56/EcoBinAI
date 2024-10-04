@@ -24,7 +24,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 100, 0, 0.4); /* Add a greenish transparent overlay */
+    background-color: rgba(0, 100, 0, 0.4); /* Greenish transparent overlay */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,5 +46,54 @@
   
   .overlay p {
     font-size: 1.2rem;
+  }
+  
+  /* WhatsApp floating button with text */
+  .whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Add space between icon and text */
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    z-index: 1000; /* Keeps the button above other elements */
+  }
+  
+  .whatsapp-button:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .whatsapp-icon {
+    font-size: 24px; /* Icon size */
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media (max-width: 768px) {
+    .overlay h1 {
+      font-size: 2.5rem;
+    }
+  
+    .overlay h3 {
+      font-size: 1.2rem;
+    }
+  
+    .whatsapp-button {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  
+    .whatsapp-icon {
+      font-size: 20px;
+    }
   }
   
