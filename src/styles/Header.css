@@ -1,0 +1,63 @@
+/* General styles for the header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 3px solid #E6E6E6;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 200px; /* Adjust the height to fit your logo size */
+  width: auto;
+  margin-top: 10px;  /* Maintain the aspect ratio */
+}
+
+.header-nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: rgb(0, 150, 66); /* Hover effect on links */
+}
+
+.contact-button {
+  background-color: rgb(0, 150, 66);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: rgb(0, 150, 66); /* Slightly darker green on hover */
+}
+
+/* Sticky header shadow effect when scrolling */
+.header.scrolled {
+  background-color: #f7f7f7;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}

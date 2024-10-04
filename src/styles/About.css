@@ -1,0 +1,142 @@
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 50px;
+  background-color: #e9f8f0;
+  border-radius: 20px;
+  position: relative;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-image: url('/tree.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+}
+
+/* Style for h2 above image */
+.about-subtitle.above-image {
+  position: absolute;
+  top: -30px; /* Place it slightly above the image */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #007f3b; /* Add a dark transparent background */
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 20px;
+  z-index: 2; /* Ensures it stays on top */
+  text-transform: uppercase;
+}
+
+/* Left section now holds the bin image */
+.about-left {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.about-team-image {
+  z-index: 1;
+  max-width: 500px; /* Make the bin image bigger */
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add shadow to the bin image */
+}
+
+.about-right {
+  flex: 1;
+  padding-left: 30px;
+  text-align: left;
+  z-index: 1; /* Ensures the text stays above the background image */
+}
+
+.about-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-description,
+.about-vision {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+/* Updated Button Styling */
+.about-contact-btn {
+  background-color: #007f3b;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.about-contact-btn:hover {
+  background-color: #005e2b;
+}
+
+.about-contact-btn .arrow {
+  margin-left: 10px;
+  transition: margin-left 0.3s ease;
+}
+
+.about-contact-btn:hover .arrow {
+  margin-left: 20px;
+}
+
+.phone-icon {
+  margin-left: 10px; /* Adds space between text and phone icon */
+  font-size: 1.2em; /* Make the icon slightly bigger */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .about-left {
+    margin-right: 0;
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  .about-right {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .about-title {
+    font-size: 32px;
+  }
+
+  .about-contact-btn {
+    margin-top: 20px;
+  }
+
+  .about-team-image {
+    max-width: 300px;
+  }
+
+  /* Adjust h2 on mobile */
+  .about-subtitle.above-image {
+    font-size: 16px;
+    padding: 8px 16px;
+    top: -20px;
+  }
+}
