@@ -157,3 +157,18 @@
     display: flex;
   }
 }
+
+
+.login-button {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: darkgreen;
+}
