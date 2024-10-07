@@ -1,20 +1,19 @@
-import React from 'react';
-import Header from './components/Header.jsx';
-import Home from './components/Home.jsx';
-import About from './components/About.jsx';
-import Features from './components/Features.jsx';
-import Footer from './components/Footer.jsx';
+
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import LandingPage from './screens/LandingPage';
+import Header from './components/Header';
+import Dashboard from './components/Dashboard';
 
 function App() {
   return (
-    <>
-      <Header />
-      <Home />
-      <About />
-      <Features />
-      <Footer />
-    </>
+    <Routes>
+      <Route path='/' index element={<LandingPage />}/>
+      {/* ELEMENT WITH THE SAME HEADER */}
+      <Route element={<Header />}>
+        <Route path='/dashboard' element={<Dashboard />}/>
+      </Route>
+    </Routes>
   );
 }
 

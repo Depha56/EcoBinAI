@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaHome, FaTrash, FaGift, FaTrophy } from 'react-icons/fa';
 import '../styles/Dashboard.css';
 

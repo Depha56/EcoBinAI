@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import '../styles/Header.css';
+import { Link, Outlet } from 'react-router-dom';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -26,31 +27,36 @@ const Header = () => {
   };
 
   return (
-    <header className={`header ${scrolled ? 'scrolled' : ''}`}>
-      <div className="header-logo">
-        <img src="/logo2.png" alt="Logo" className="logo-img" />
-      </div>
-      
-      {/* Hamburger menu for mobile */}
-      <div className="hamburger" onClick={toggleMenu}>
-        <div className={`line ${menuOpen ? 'open' : ''}`}></div>
-        <div className={`line ${menuOpen ? 'open' : ''}`}></div>
-        <div className={`line ${menuOpen ? 'open' : ''}`}></div>
-      </div>
-      
-      {/* Navigation Links */}
-      <nav className={`header-nav ${menuOpen ? 'open' : ''}`}>
-        <ul className="nav-links">
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#features">FEATURES</a></li>
-        </ul>
-        <div className="auth-buttons">
-          <a href="#login" className="login-button">Login</a>
-          <a href="#signup" className="signup-button">Signup</a>
+    <>
+        <header className={`header ${scrolled ? 'scrolled' : ''}`}>
+        <div className="header-logo">
+            <img src="/logo2.png" alt="Logo" className="logo-img" />
         </div>
-      </nav>
-    </header>
+        
+        {/* Hamburger menu for mobile */}
+        <div className="hamburger" onClick={toggleMenu}>
+            <div className={`line ${menuOpen ? 'open' : ''}`}></div>
+            <div className={`line ${menuOpen ? 'open' : ''}`}></div>
+            <div className={`line ${menuOpen ? 'open' : ''}`}></div>
+        </div>
+        
+        {/* Navigation Links */}
+        <nav className={`header-nav ${menuOpen ? 'open' : ''}`}>
+            <ul className="nav-links">
+            <li><Link to="/#home">HOME</Link></li>
+            <li><Link to="/#about">ABOUT</Link></li>
+            <li><Link to="/#features">FEATURES</Link></li>
+            </ul>
+            <div className="auth-buttons">
+            <Link to="/dashboard" className="login-button">Login</Link>
+            <a href="#signup" className="signup-button">Signup</a>
+            </div>
+        </nav>
+        </header>
+
+        {/* Helps Router move to children route */}
+        <Outlet />
+    </>
   );
 };
 
