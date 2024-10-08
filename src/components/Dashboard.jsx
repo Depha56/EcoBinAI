@@ -1,39 +1,16 @@
-import { FaHome, FaTrash, FaGift, FaTrophy } from 'react-icons/fa';
+// src/components/Home.js
+import React from 'react';
 import '../styles/Dashboard.css';
-
 const Dashboard = () => {
   return (
-    <div className="dashboard-container">
-      <aside className="sidebar">
-        <div className="logo">
-          <FaHome /> Zero2Hero
-        </div>
-        <nav className="nav-links">
-          <a href="#home" className="nav-link active">
-            <FaHome /> Home
-          </a>
-          <a href="#report" className="nav-link">
-            <FaTrash /> Report Waste
-          </a>
-          <a href="#collect" className="nav-link">
-            <FaTrash /> Collect Waste
-          </a>
-          <a href="#rewards" className="nav-link">
-            <FaGift /> Rewards
-          </a>
-          <a href="#leaderboard" className="nav-link">
-            <FaTrophy /> Leaderboard
-          </a>
-        </nav>
-        <div className="settings">
-          <FaHome /> Settings
-        </div>
-      </aside>
-      <main className="content">
-        <h1>Zero-to-Hero Waste Management</h1>
-        <p>Join our community in making waste management more efficient and rewarding!</p>
-        <button className="get-started">Get Started</button>
-      </main>
+    <div className="homedash-container">
+      <h1>Welcome to Ecobin AI</h1>
+      <p>
+        Ecobin AI is a smart waste management system that uses IoT and AI to automate waste sorting, optimize collection routes, and provide real-time data. Our mission is to make waste management more efficient, sustainable, and eco-friendly in Rwanda.
+      </p>
+      <p>
+        With real-time bin level monitoring, automated notifications, and data-driven insights, Ecobin AI helps cities, organizations, and individuals reduce waste collection costs and promote sustainability.
+      </p>
     </div>
   );
 };
