@@ -65,3 +65,13 @@
     border-radius: 4px;
   }
   
+
+  /* DASHBOARD MAIN */
+  .mainApp {
+    display: flex;
+  }
+
+  .main_content{
+    width: calc(100% - 250px);
+    padding-top: 20px;
+  }
