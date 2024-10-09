@@ -37,7 +37,7 @@ select {
 }
 
 .save-button {
-    background-color: #3498db; /* Button color */
+    background-color: #007f3b; /* Button color */
     color: white;
     border: none;
     padding: 10px;
@@ -48,5 +48,5 @@ select {
 }
 
 .save-button:hover {
-    background-color: #2980b9; /* Darker shade on hover */
+    background-color: #007f3b; /* Darker shade on hover */
 }
