@@ -1,0 +1,52 @@
+/* src/styles/Settings.css */
+.settings-container {
+    padding: 20px;
+}
+
+.settings-section {
+    margin-bottom: 30px; /* Space between sections */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light gray background for sections */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="email"],
+input[type="color"],
+select {
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+}
+
+.save-button {
+    background-color: #3498db; /* Button color */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+}
